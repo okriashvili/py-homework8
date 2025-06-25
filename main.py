@@ -26,7 +26,12 @@ print(f"მაღალ რესტრში გადავაქციეთ 
 # დაწერეთ ფუნქცია, რომელიც პარამეტრად მიიღებს ე.წ. camel case ცვლადებს და დააბრუნებს snake case სახით, ანუ თუ გადავცემთ ცვლადს
 # firstName დააბრუნებს first_name, name დააბრუნებს ისევ name, preferredFirstName დააბრუნებს preferred_first_name, lastName დააბრუნებს
 # last_name და ასე შემდეგ.
-
+def camel_to_snake(camel_str):
+    for char in camel_str:
+        if char.isupper():
+            camel_str = camel_str.replace(char, '_' + char.lower())
+    return camel_str
+print(camel_to_snake(input("enter a camel case string: ")))
 
 
 
